@@ -16,7 +16,7 @@ if [ -e $script ];
 	then
 		echo "Script softshutdown.py already exists. Doing nothing."
 	else
-		wget "https://raw.githubusercontent.com/DeikiChen/softpower/master/softshutdown.py"
+		wget "https://raw.githubusercontent.com/SNESPi/Super-NESPi-Case/master/retropie_SafeShutdown.py"
 fi
 
 #Step 4) Set sutostart ---------------------------
