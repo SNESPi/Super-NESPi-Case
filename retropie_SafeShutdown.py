@@ -37,7 +37,7 @@ class myThread (threading.Thread):
                 GPIO.output(fanPin, GPIO.HIGH)
 
             temp="temp : %.1f" % temp
-            print temp
+            #print temp
 
 
             time.sleep(10)
@@ -63,8 +63,6 @@ while True:
             GPIO.output(sparepowerPin,GPIO.LOW)
             print ("Switch mode=2:Software shutdown mode!")
             power_sate=2
-            #将powerPin设置成下降沿中断
-            #将resetPin设置成上升沿中断
             GPIO.add_event_detect(powerPin, GPIO.FALLING)
             GPIO.add_event_detect(resetPin, GPIO.RISING)
 
