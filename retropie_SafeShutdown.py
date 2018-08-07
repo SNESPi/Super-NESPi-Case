@@ -54,16 +54,17 @@ thread1 = myThread(1, "Thread-1", 1)
 
 
 while True:
-
+    
     time.sleep(0.5)
     #pin7 is the power_key detect ponit ,if PIN7 is hight ,it is mean now is saft soft-shutdown
-
     if power_sate == 0:
         if GPIO.input(powerPin) :
             #open the spare mos
             GPIO.output(sparepowerPin,GPIO.LOW)
             print ("Switch mode=2:Software shutdown mode!")
             power_sate=2
+            #将powerPin设置成下降沿中断
+            #将resetPin设置成上升沿中断
             GPIO.add_event_detect(powerPin, GPIO.FALLING)
             GPIO.add_event_detect(resetPin, GPIO.RISING)
 
@@ -84,7 +85,6 @@ while True:
         if GPIO.event_detected(resetPin):
             print ("The system will be reboot soon!")
             os.system("shutdown -r now")
-
 
 
 
