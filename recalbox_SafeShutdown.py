@@ -37,7 +37,7 @@ class myThread (threading.Thread):
                 GPIO.output(fanPin, GPIO.HIGH)
 
             temp="temp : %.1f" % temp
-            print temp
+            #print temp
 
 
             time.sleep(10)
