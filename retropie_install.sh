@@ -16,10 +16,10 @@ if [ -e $script ];
 	then
 		echo "Script softshutdown.py already exists. Doing nothing."
 	else
-		wget "https://raw.githubusercontent.com/SNESPi/Super-NESPi-Case/master/retropie_SafeShutdown.py"
+		wget "https://raw.githubusercontent.com/DeikiChen/softpower/master/softshutdown.py"
 fi
 
-#Step 3) Set sutostart ---------------------------
+#Step 4) Set sutostart ---------------------------
 cd /etc/
 RC=rc.local
 
@@ -34,12 +34,11 @@ fi
 #-----------------------------------------------------------
 
 #-------------------------------------------------------------
-#Step 4) Reboot to apply changes----------------------------
+#Step 5) Reboot to apply changes----------------------------
 echo "SuperNESPi Case installation done. Will now reboot after 3 seconds."
 sleep 3
 sudo reboot
 #-----------------------------------------------------------
-
 
 
 
