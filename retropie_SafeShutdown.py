@@ -5,10 +5,10 @@ import time
 import os
 import threading
 
-powerPin=7
+powerPin=16
 resetPin=8
-sparepowerPin=3
-fanPin=5
+sparepowerPin=10
+fanPin=12
 
 
 GPIO.setmode(GPIO.BOARD)
