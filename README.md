@@ -26,3 +26,4 @@ Example for Raspbian:
 3. In the terminal, type the  command below:<br>
 *wget -O - "https://raw.githubusercontent.com/SNESPi/Super-NESPi-Case/master/retropie_install.sh" | sudo bash*
 
+![alt](https://github.com/SNESPi/Super-NESPi-Case/blob/master/img/image3.jpg SNESPI)
