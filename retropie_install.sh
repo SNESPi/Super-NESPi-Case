@@ -35,6 +35,16 @@ fi
 
 #-------------------------------------------------------------
 #Step 5) Reboot to apply changes----------------------------
+File=/boot/config.txt
+if grep -q "avoid_warnings=1" "$File";
+	then
+		echo "WARN has disbales. Doing nothing."
+	else
+		echo "avoid_warnings=1" >> $File
+		echo "WARN disbales"
+fi
+
+sleep 1s
 echo "SuperNESPi Case installation done. Will now reboot after 3 seconds."
 sleep 3
 sudo reboot
